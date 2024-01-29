@@ -1,0 +1,13 @@
+stages:
+- test
+
+snyk_dependency_scan:
+  stage: test
+  image: node:latest
+  script:
+    - pwd
+    - npm install -g npm@latest # Install project dependencies
+    - npm install
+    - npm install -g snyk # Install Snyk globally
+    - snyk auth $SNYK_TOKEN    
+    - snyk test # Run Snyk test to scan for vulnerabilities
