@@ -1,0 +1,15 @@
+{
+  "name": "vulnerable-node-app",
+  "version": "1.0.0",
+  "description": "A deliberately vulnerable Node.js application for educational purposes",
+  "main": "app.js",
+  "dependencies": {
+    "express": "4.13.1",
+    "body-parser": "1.19.0",
+    "lodash": "4.17.5"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "dehvCurtis",
+}
