@@ -1,0 +1,11 @@
+image: node:latest
+
+pipelines:
+  default:
+    - step:
+        name: Scan Dependencies
+        script:
+          - npm install # Install project dependencies
+          - npm install -g snyk # Install Snyk globally
+          - snyk auth $SNYK_TOKEN
+          - snyk test # Run Snyk test to scan for vulnerabilities
